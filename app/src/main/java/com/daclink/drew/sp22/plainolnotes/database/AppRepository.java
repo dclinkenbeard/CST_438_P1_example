@@ -19,7 +19,7 @@ public class AppRepository {
 
     public LiveData<List<NoteEntity>> mNotes;
     private AppDatabase mDb;
-//    use the same executer so all DB operations are queued rather than run on top of each other.
+//    use the same executor so all DB operations are queued rather than run on top of each other.
     private Executor executor = Executors.newSingleThreadExecutor();
 
     public static AppRepository getInstance(Context context){
