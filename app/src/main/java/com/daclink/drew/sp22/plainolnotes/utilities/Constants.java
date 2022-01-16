@@ -5,4 +5,5 @@ public class Constants {
     public static final String EDITING_KEY = "editing_key";
 
     public static final String BOOK_SEARCH_SERVICE_BASE_URL = "https://www.googleapis.com";
+
 }

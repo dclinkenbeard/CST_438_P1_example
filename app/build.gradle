@@ -102,4 +102,14 @@ dependencies {
     // glide /app/build.gradle dependencies
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+
+
+}
+dotenv {
+    // the package name that is added to the top of your source code file: `import X.Y.Z`
+//        packageName = "com.foo.bar"
+    packageName = "com.daclink.drew.sp22.plainolnotes"
+    // the path to the source code in your Android app module. This is probably `src/main/java` but could be something else like `src/main/kotlin`
+    sourcePath = "src/main/java/"
 }
