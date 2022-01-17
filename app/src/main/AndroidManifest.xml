@@ -12,12 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlainOlNotes">
         <activity
+            android:name=".BookSearch"
+            android:exported="true" />
+        <activity
             android:name=".EditorActivity"
             android:exported="false"
             android:label="@string/title_activity_editor"
-            android:theme="@style/Theme.PlainOlNotes.NoActionBar"
             android:parentActivityName=".MainActivity"
-            />
+            android:theme="@style/Theme.PlainOlNotes.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

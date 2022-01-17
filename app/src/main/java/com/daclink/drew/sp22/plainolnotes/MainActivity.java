@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding mActivityMainBinding;
 
-//    @BindView(R.id.recycler_view)
+    //    @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
 
     private List<NoteEntity> notesData = new ArrayList<>();
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         mRecyclerView = mActivityMainBinding.contentMain.recyclerView;
 
-        setSupportActionBar( mActivityMainBinding.toolbar);
+        setSupportActionBar(mActivityMainBinding.toolbar);
 //        ButterKnife.bind(this);
 
         initRecyclerView();
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 if (mAdapter == null) {
                     mAdapter = new NotesAdapter(notesData, MainActivity.this);
                     mRecyclerView.setAdapter(mAdapter);
-                }else{
+                } else {
                     mAdapter.notifyDataSetChanged();
                 }
 
@@ -124,12 +124,20 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_add_sample_data) {
             addSampleData();
             return true;
-        }else if(id == R.id.action_delete_all) {
+        } else if (id == R.id.action_delete_all) {
             deleteAllNotes();
+            return true;
+        } else if (id == R.id.action_book_search_page) {
+            bookSearch();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void bookSearch() {
+        Intent intent = new Intent(getApplicationContext(), BookSearch.class);
+        startActivity(intent);
     }
 
     private void deleteAllNotes() {
