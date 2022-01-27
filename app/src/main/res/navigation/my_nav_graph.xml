@@ -9,6 +9,7 @@
         android:id="@+id/bookSearchFragment"
         android:name="com.daclink.drew.sp22.plainolnotes.fragments.BookSearchFragment"
         android:label="fragment_booksearch"
-        tools:layout="@layout/fragment_booksearch" />
+        tools:layout="@layout/fragment_booksearch">
+    </fragment>
 
 </navigation>
