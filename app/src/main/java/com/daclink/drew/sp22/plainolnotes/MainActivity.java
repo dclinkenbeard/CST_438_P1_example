@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -127,9 +128,19 @@ public class MainActivity extends AppCompatActivity {
         }else if(id == R.id.action_delete_all) {
             deleteAllNotes();
             return true;
+        }else if(id == R.id.action_toast_notes){
+            toastNotes();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void toastNotes() {
+        notesData =  mViewModel.toastMessage();
+
+        Toast.makeText(this, notesData.get(0).toString(), Toast.LENGTH_SHORT).show();
+
     }
 
     private void deleteAllNotes() {

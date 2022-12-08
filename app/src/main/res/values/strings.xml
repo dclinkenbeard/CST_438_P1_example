@@ -106,4 +106,5 @@
     <string name="edit_note">Edit Note</string>
     <string name="new_note_two">New Note</string>
     <string name="delete">Delete</string>
+    <string name="toastnotes">Toast Notes</string>
 </resources>

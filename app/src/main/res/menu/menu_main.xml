@@ -13,4 +13,10 @@
         android:orderInCategory="101"
         android:title="@string/delete_all"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_toast_notes"
+        android:orderInCategory="102"
+        android:title="@string/toastnotes"
+        app:showAsAction="never" />
 </menu>

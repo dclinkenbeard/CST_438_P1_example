@@ -27,6 +27,10 @@ public class MainViewModel extends AndroidViewModel {
         mRepository.addSampleData();
     }
 
+    public List<NoteEntity> toastMessage(){
+        return mRepository.getAllNotesList();
+    }
+
     public void deleteAllNotes() {
         mRepository.deleteAllNotes();
     }

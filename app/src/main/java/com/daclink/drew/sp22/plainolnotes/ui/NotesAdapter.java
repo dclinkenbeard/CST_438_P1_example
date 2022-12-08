@@ -19,9 +19,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
-//import butterknife.BindView;
-//import butterknife.ButterKnife;
-
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> {
 
     private final List<NoteEntity> mNotes;
@@ -67,7 +64,6 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
                 mContext.startActivity(intent);
             }
         });
-
     }
 
     @Override

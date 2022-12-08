@@ -44,9 +44,13 @@ public class AppRepository {
     }
 //    this is where we add a connection to the web.
     private LiveData<List<NoteEntity>> getAllNotes(){
-
         //we don't need an Executor because room handles background threads when using LiveData
         return mDb.noteDao().getAll();
+    }
+
+    public List<NoteEntity> getAllNotesList(){
+        //we don't need an Executor because room handles background threads when using LiveData
+        return mDb.noteDao().getAllList();
     }
 
     public void deleteAllNotes() {
