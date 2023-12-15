@@ -38,6 +38,38 @@ public class BookRepository {
                 .create(BookSearchService.class);
     }
 
+    public void showAllPokemon(){
+        bookSearchService.listAllPokemon()
+                .enqueue(new Callback<VolumesResponse>() {
+                    @Override
+                    public void onResponse(Call<VolumesResponse> call, Response<VolumesResponse> response) {
+                        if(response.body() != null){
+                            volumesResponseLiveData.postValue(response.body());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<VolumesResponse> call, Throwable t) {
+                        volumesResponseLiveData.postValue(null);
+                    }
+                });
+    }
+
+//    public void getPokemon(String pokemon){
+//        bookSearchService.getPokemon(String pokemon)
+//                .enqueue(new Callback<VolumesResponse>() {
+//                    @Override
+//                    public void onResponse(Call<VolumesResponse> call, Response<VolumesResponse> response) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<VolumesResponse> call, Throwable t) {
+//
+//                    }
+//                });
+//    }
+
     public void searchVolumes(String keyword, String author, String apiKey) {
         bookSearchService.searchVolumes(keyword, author, apiKey)
                 .enqueue(new Callback<VolumesResponse>() {

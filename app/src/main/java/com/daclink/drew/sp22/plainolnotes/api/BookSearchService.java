@@ -15,4 +15,16 @@ public interface BookSearchService {
             @Query("key") String apiKey
     );
 
+    @GET("/pokemon/?limit=1500")
+    Call<VolumesResponse> listAllPokemon(
+
+    );
+
+    @GET("/pokemon/")
+    Call<VolumesResponse> getPokemon(
+        @Query("pokemon") String pokemon
+    );
+
+
+
 }
